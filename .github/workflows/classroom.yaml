@@ -4,8 +4,15 @@
       push: 
         paths: 
           # Do not run workflow unless these files were modified
-          - 'assignment.py' 
+          - 'main.py' 
+          - 'stock_analyzer.py'
+          - 'utils.py'
           - 'test_assignment.py' 
+
+    permissions:
+      checks: write
+      actions: read
+      contents: read
 
     jobs:
       build:

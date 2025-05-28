@@ -1,34 +1,34 @@
 {
     "tests": [
       {
-        "name": "parte1",
+        "name": "part1",
         "setup": "sudo -H pip3 install -r requirements.txt",
-        "run": "pytest test_assignment.py::test_hello",
+        "run": "pytest test_assignment.py::test_daily_returns_properties",
         "input": "",
         "output": "",
         "comparison": "included",
         "timeout": 5,
-        "points": 1
+        "points": 5
       },
       {
-        "name": "parte2",
+        "name": "part2",
         "setup": "sudo -H pip3 install -r requirements.txt",
-        "run": "pytest test_assignment.py::test_add_two",
+        "run": "pytest test_assignment.py::test_moving_average_values",
         "input": "",
         "output": "",
         "comparison": "included",
         "timeout": 5,
-        "points": 1
+        "points": 5
       },
       {
         "name": "parte3",
         "setup": "sudo -H pip3 install -r requirements.txt",
-        "run": "pytest test_assignment.py::test_zero_array",
+        "run": "pytest test_assignment.py::test_volatility_value",
         "input": "",
         "output": "",
         "comparison": "included",
         "timeout": 5,
-        "points": 1
+        "points": 10
       }
     ]
   }
