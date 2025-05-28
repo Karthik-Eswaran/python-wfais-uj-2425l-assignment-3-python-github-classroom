@@ -1,10 +1,21 @@
 import numpy as np
 
 def moving_average(data, window):
-    return np.convolve(data, np.ones(window)/window, mode='valid')
+    """ Calculate the moving average,
+    given a data array and a window size.
+    The moving average is calculated as the
+    average of groups of 'window' consecutive elements.
+    """
+    pass
 
 def daily_returns(data):
-    return (data[1:] - data[:-1]) / data[:-1]
+    """ Calculate daily returns from a price series.
+    Returns the percentage change between consecutive days.
+    """
+    pass
 
 def volatility(returns):
-    return np.std(returns)
+    """ Calculate the volatility of a series of returns.
+    Volatility is defined as the standard deviation of returns.
+    """
+    pass

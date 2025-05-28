@@ -1,23 +1,15 @@
 # 📊 Assignment: Financial Data Analyzer
 
 ## Objective
-Build a Python application that loads financial time series data and performs basic analysis using Object-Oriented Programming (OOP), modular design, and basic linear algebra/statistics. You will create a class to encapsulate data operations, use a separate module for computations, and produce plots for interpretation.
+Build a Python application that loads financial time series data and performs basic analysis using Object-Oriented Programming (OOP), modular design, and basic linear algebra/statistics. You will create a class to encapsulate data operations, use a separate module for computations, and produce plots using matplotlib for interpretation.
 
 ---
 
-## Learning Goals
-- Practice **OOP** in Python (classes, methods, attributes).
-- Use **modular programming** by creating and importing your own module.
-- Apply basic **statistics and linear algebra** to real-world data.
-- Gain experience with **Pandas**, **NumPy**, and **Matplotlib**.
-
----
-
-## Files Provided
+## Files Information
 - `sample_stock_data.csv`: sample data (columns: `Date`, `Close`, `Volume`)
-- `main.py`: runs your analysis
-- `stock_analyzer.py`: where your main class goes
-- `finance_utils.py`: helper functions
+- `main.py`: runs everything
+- `stock_analyzer.py`: the main class 
+- `utils.py`: helper functions
 
 ---
 
@@ -78,26 +70,6 @@ print("Volatility:", analyzer.compute_volatility())
 
 ---
 
-## Evaluation Criteria
-
-| Criteria                              | Points |
-|--------------------------------------|--------|
-| Use of classes and methods           | 30     |
-| Modular structure with helper module | 20     |
-| Accurate computations                | 20     |
-| Readable and labeled plots           | 15     |
-| Code readability and comments        | 15     |
-
----
-
-## Setup
-Install dependencies:
-```bash
-pip install pandas matplotlib numpy
-```
-
----
-
 ## Example Datasets
 
 You can use real-world data from:
@@ -106,34 +78,6 @@ You can use real-world data from:
 - [Alpha Vantage](https://www.alphavantage.co)
 - [Kaggle Datasets](https://www.kaggle.com/datasets)
 - [Nasdaq Data Link](https://data.nasdaq.com)
-
----
-
-## ✅ Tests (for GitHub Classroom)
-Place this in a `test_assignment.py` file:
-
-```python
-import pytest
-from stock_analyzer import StockAnalyzer
-
-def test_daily_returns():
-    analyzer = StockAnalyzer("sample_stock_data.csv")
-    returns = analyzer.compute_daily_returns()
-    assert len(returns) == len(analyzer.close_prices) - 1
-    assert abs(returns.mean()) < 1  # assuming simulated data is mean-reverting
-
-def test_moving_average():
-    analyzer = StockAnalyzer("sample_stock_data.csv")
-    ma = analyzer.compute_moving_average(window=5)
-    assert len(ma) == len(analyzer.close_prices) - 4
-    assert all(ma >= 0)  # prices are positive, so MA should be too
-
-def test_volatility():
-    analyzer = StockAnalyzer("sample_stock_data.csv")
-    vol = analyzer.compute_volatility()
-    assert isinstance(vol, float)
-    assert vol >= 0
-```
 
 ---
 
